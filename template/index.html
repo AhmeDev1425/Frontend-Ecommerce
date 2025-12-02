@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxora - Premium E-commerce</title>
+  <title>Ahmed - Premium E-commerce</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +44,7 @@
               </svg>
             </label>
             <label for="login-modal" class="header__login">Login</label>
+            <label for="login-modal" class="header__login">Sign up</label>
           </div>
         </div>
       </div>
@@ -51,7 +52,7 @@
       <nav class="header__main">
         <div class="header__main-content">
           <div class="header__logo">
-            <h1>Luxora</h1>
+            <h1>Ahmed</h1>
           </div>
           
           <div class="header__search">
@@ -89,7 +90,7 @@
         </div>
         
         <!-- Mega Menu -->
-        <div class="mega-menu">
+        <!-- <div class="mega-menu">
           <div class="mega-menu__trigger">
             <span>Categories</span>
             <svg viewBox="0 0 24 24">
@@ -125,21 +126,66 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
       </nav>
     </div>
   </header>
 
   <!-- Hero Section with Parallax -->
-  <section class="hero">
-    <div class="hero__bg-layer hero__bg-layer--1"></div>
-    <div class="hero__bg-layer hero__bg-layer--2"></div>
-    <div class="hero__content">
-      <h2 class="hero__title">Discover Premium Collections</h2>
-      <p class="hero__subtitle">Curated luxury items for the modern lifestyle</p>
-      <a href="products.html" class="hero__cta">Shop Now</a>
-    </div>
-  </section>
+    <section class="hero">
+        <div class="hero__bg-layer hero__bg-layer--1"></div>
+        <div class="hero__bg-layer hero__bg-layer--2"></div>
+        <div class="hero__bg-layer hero__bg-layer--3"></div>
+        <div class="hero__bg-layer hero__bg-layer--4"></div>
+        
+        <div class="hero__floating-elements">
+            <div class="hero__floating-element hero__floating-element--1"></div>
+            <div class="hero__floating-element hero__floating-element--2"></div>
+            <div class="hero__floating-element hero__floating-element--3"></div>
+        </div>
+        
+        <div class="hero__content">
+            <h1 class="hero__title">Discover Premium Collections</h1>
+            <p class="hero__subtitle">Curated <span class="hero__highlight">ahmed items</span> for the modern lifestyle. Experience quality, style, and innovation in every product we offer.</p>
+            <div class="hero__cta-container">
+                <a href="products.html" class="hero__cta">
+                    Shop Now
+                    <svg class="hero__cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#features" class="hero__cta hero__cta--secondary">
+                    Explore Features
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Add interactive mouse move effect
+        document.querySelector('.hero').addEventListener('mousemove', (e) => {
+            const hero = e.currentTarget;
+            const { left, top, width, height } = hero.getBoundingClientRect();
+            const x = (e.clientX - left) / width;
+            const y = (e.clientY - top) / height;
+            
+            // Move background layers based on mouse position
+            const layer1 = document.querySelector('.hero__bg-layer--1');
+            const layer2 = document.querySelector('.hero__bg-layer--2');
+            const layer3 = document.querySelector('.hero__bg-layer--3');
+            
+            layer1.style.transform = `translate(${(x - 0.5) * 10}px, ${(y - 0.5) * 10}px) scale(1.02)`;
+            layer2.style.transform = `translate(${(x - 0.5) * -15}px, ${(y - 0.5) * -15}px) rotate(${(x - 0.5) * 2}deg)`;
+            layer3.style.transform = `translate(${(x - 0.5) * 20}px, ${(y - 0.5) * 20}px)`;
+        });
+        
+        // Reset transform on mouse leave
+        document.querySelector('.hero').addEventListener('mouseleave', () => {
+            const layers = document.querySelectorAll('.hero__bg-layer');
+            layers.forEach(layer => {
+                layer.style.transform = '';
+            });
+        });
+    </script>
 
   <!-- Featured Products - Square Cards -->
   <section class="products-section">
@@ -152,7 +198,7 @@
       <div class="products-scroll">
         <div class="product-card product-card--square">
           <div class="product-card__image">
-            <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=650&h=650" alt="Luxury Watch" width="650" height="650">
+            <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=650&h=650" alt="Ahmed Watch" width="650" height="650">
             <div class="product-card__overlay">
               <label for="quick-view-modal" class="product-card__quick-view">Quick View</label>
               <input type="checkbox" id="wishlist-1" class="wishlist-toggle">
@@ -170,7 +216,7 @@
             </div>
           </div>
           <div class="product-card__content">
-            <h3 class="product-card__title">Luxury Watch</h3>
+            <h3 class="product-card__title">Ahmed Watch</h3>
             <p class="product-card__price">$299.99</p>
             <div class="product-card__rating">
               <span class="stars">★★★★★</span>
@@ -596,7 +642,7 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__section">
-          <h3 class="footer__title">Luxora</h3>
+          <h3 class="footer__title">Ahmed</h3>
           <p class="footer__description">Premium e-commerce experience with curated collections for the modern lifestyle.</p>
           <div class="footer__social">
             <a href="#" class="footer__social-link">
@@ -649,7 +695,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p>&copy; 2025 Luxora. All rights reserved.</p>
+        <p>&copy; 2025 Ahmed. All rights reserved.</p>
       </div>
     </div>
   </footer>

@@ -1355,3 +1355,48 @@
     outline-offset: 2px;
   }
 }
+
+
+
+/* Enhanced Hero */
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 600px;
+            }
+            
+            .hero__title {
+                font-size: var(--font-size-4xl);
+            }
+            
+            .hero__subtitle {
+                font-size: var(--font-size-xl);
+            }
+            
+            .hero__content {
+                padding: var(--space-8);
+                margin: var(--space-4);
+            }
+            
+            .hero__cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero__cta {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero__title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .hero__subtitle {
+                font-size: var(--font-size-lg);
+            }
+        }
