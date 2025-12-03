@@ -1,8 +1,19 @@
+import { useState } from "react";
 
 
 
 export default function Signup() {
+    const [email, setEmail] = useState("") 
+    const [password, setPassword] = useState("") 
+    const [repassword, setRepassword] = useState("") 
+    const [valid, setValid] = useState(false);
+
+    function submitSignup(e) {
+        e.preventDefault();
+        setValid(true)
+    }
     return (
+
         <>
             {/* <div className="modal login-modal"> */}
                 <div className="modal__backdrop">
@@ -17,17 +28,33 @@ export default function Signup() {
                     </div>
                 
                     <div className="modal__body">
-                        <form className="login-form">
+                        <form onSubmit={submitSignup} className="login-form">
                             <div className="form-group">
-                                <input type="email" placeholder="Email" required/>
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" value={email} required/>
                             </div>
 
                             <div className="form-group">
-                                <input type="password" placeholder="Password" required/>
+                                {password.length < 8 && valid 
+                                &&(<p className="validation-false" >× Password must be more than 8 chars .</p>)
+                                }
+                                {password === repassword  && password.length > 8 &&  repassword.length > 8
+                                &&(<p className="validation-true" > ✓ Valid Password.</p>)
+                                }
+                                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" value={password} required/>
                             </div>
 
                             <div className="form-group">
-                                <input type="password" placeholder="Confirm Password" required/>
+                                {password !== repassword && valid  
+                                &&(<p className="validation-false" >× Two password shouldn,t be different .</p>)
+                                }
+                                {password.length < 8 && valid 
+                                &&(<p className="validation-false" >× Confirmed Password must be more than 8 chars .</p>)
+                                }
+
+                                {password === repassword && password.length > 8 &&  repassword.length > 8 
+                                &&(<p className="validation-true" > ✓ Two passwords are matched .</p>)
+                                }
+                                <input onChange={(e) => setRepassword(e.target.value)} type="password" placeholder="Confirm Password" value={repassword} required/>
                             </div>
 
                             <button type="submit" className="btn btn--primary btn--full">Sign up</button>

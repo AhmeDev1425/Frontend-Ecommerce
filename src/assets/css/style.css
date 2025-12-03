@@ -1712,6 +1712,21 @@ a:hover {
   color: var(--color-primary);
   font-weight: var(--font-weight-medium);
 }
+.validation-false{
+  color: var(--color-error);
+  font-size: var(--font-size-xs);
+  margin:auto auto auto 10px  ;
+
+
+}
+
+.validation-true{
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  margin:auto auto auto 10px  ;
+
+
+}
 
 /* ===================================
    TOAST NOTIFICATIONS
