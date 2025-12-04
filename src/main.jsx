@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as R, Routes, Route } from 'react-router-dom'
 
 import './assets/css/style.css'
 import './assets/css/responsive.css'
@@ -11,14 +11,14 @@ import Header from './Components/Header'
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
-    <BrowserRouter>
+    <R>
         <Header/>
 
         <Routes>
           <Route path="/register" element={<Signup />}/>
           <Route path="/login" element={<Login />}/>
         </Routes>
-    </BrowserRouter>
+    </R>
   </StrictMode>,
   
 )
