@@ -34,7 +34,7 @@ export default function Signup() {
                         <h3>Sign up</h3>
                         <label htmlFor="login-modal" className="modal__close">×</label>
                     </div>
-                
+
                     <div className="modal__body">
                         <form onSubmit={submitSignup} className="login-form">
                             <div className="form-group">

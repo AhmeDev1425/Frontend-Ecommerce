@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 export default function Header() {
     return(
@@ -19,8 +19,8 @@ export default function Header() {
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                         </svg>
                         </label>
-                        <label for="login-modal" className="header__login">Login</label>
-                        <label for="login-modal" className="header__login">Sign up</label>
+                        <Link to="/login"> <label for="login-modal" className="header__login">Login</label> </Link>
+                        <Link to="/register"> <label for="login-modal" className="header__login">Sign up</label> </Link>
                     </div>
                     </div>
                 </div>
