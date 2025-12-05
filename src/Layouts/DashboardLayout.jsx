@@ -1,14 +1,17 @@
 // DashboardLayout.jsx
-import '../assets/dashboard/dashboard.css'
-import Header from "../Dashboard/Header"
-import Sidebar from "../Dashboard/Sidebar"
+import Header from "../Components/Dashboard/Header"
+import Sidebar from "../Components/Dashboard/Sidebar"
+import '../assets/css/dashboard.css'
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout() {
   return (
-    <div className="dashboard-wrapper">
+    
+    <div className="dashboard-app">
       <Header />
       <Sidebar />
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 }

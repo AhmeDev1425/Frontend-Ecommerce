@@ -1,10 +1,15 @@
-import Header from "../Components/Header";
+import Header from "../Components/Ecommerce/Header";
+import { Outlet } from "react-router-dom"
 
-export default function EcommerceLayout({ children }) {
+import '../assets/css/style.css'
+import '../assets/css/responsive.css'
+
+export default function EcommerceLayout() {
   return (
     <>
-      <Header />
-      {children}
+        <Header />
+        <Outlet />
+
     </>
   );
 }
