@@ -3,8 +3,8 @@ export default function Categories() {
     
           <table className="table">
             <thead>
-              <tr>Categ
-                <th>Name</th>
+              <tr>
+                <th>Categ</th>
                 <th>Email</th>
                 <th>Status</th>
                 <th>Actions</th>

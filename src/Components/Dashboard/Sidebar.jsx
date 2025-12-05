@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+
 export default function Sidebar() {
     
     return(<>
@@ -8,7 +11,9 @@ export default function Sidebar() {
         <div className="logo-icon">T</div>
         <span className="logo-text">Ahmed</span>
       </div>
+
       <ul className="sidebar-nav">
+      <Link to="/dashboard">
         <li className="nav-item">
           <a href="dashboard.html" className="nav-link">
             <svg className="nav-icon" fill="currentColor" viewBox="0 0 20 20">
@@ -17,6 +22,8 @@ export default function Sidebar() {
             Dashboard
           </a>
         </li>
+      </Link>
+
         <li className="nav-item">
           <a href="classes.html" className="nav-link">
             <svg className="nav-icon" fill="currentColor" viewBox="0 0 20 20">
