@@ -4,26 +4,32 @@ import { BrowserRouter as R, Routes, Route } from 'react-router-dom'
 
 import './assets/css/style.css'
 import './assets/css/responsive.css'
+
+import EcommerceLayout from './Layouts/EcommerceLayout'
+import DashboardLayout from './Layouts/DashboardLayout'
+
 import Signup from './Components/Signup'
 import Login from './Components/Login'
-import Header from './Components/Header'
 import Dashboard from './Components/Dashboard'
 
-createRoot(document.getElementById('root')).render(
 
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <R>
-          <Header/>
+      <Routes>
 
-        <Routes>
-          <Route path="/admin" element={<Dashboard />}/>
-        </Routes>
-        
-        <Routes>
-          <Route path="/register" element={<Signup />}/>
-          <Route path="/login" element={<Login />}/>
-        </Routes>
+        {/* Ecommerce Routes */}
+        <Route element={<EcommerceLayout />}>
+          <Route path="/register" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+
+        {/* Dashboard Routes */}
+        <Route element={<DashboardLayout />}>
+          <Route path="/admin" element={<Dashboard />} />
+        </Route>
+
+      </Routes>
     </R>
-  </StrictMode>,
-  
+  </StrictMode>
 )
