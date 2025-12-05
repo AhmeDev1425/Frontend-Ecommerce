@@ -55,7 +55,7 @@ export default function Login() {
 
                             <button type="submit" className="btn btn--primary btn--full">Login</button>
 
-                            <p class="login-form__footer">
+                            <p className="login-form__footer">
                                 Don't have an account? <a href="#">Sign up</a>
                             </p>
                             

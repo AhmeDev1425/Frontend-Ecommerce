@@ -66,14 +66,14 @@ export default function Header() {
                     </div>
                     
                     {/* <div className="mega-menu">
-                    <div class="mega-menu__trigger">
+                    <div className"mega-menu__trigger">
                         <span>Categories</span>
                         <svg viewBox="0 0 24 24">
                         <polyline points="6,9 12,15 18,9"/>
                         </svg>
                     </div>
-                    <div class="mega-menu__content">
-                        <div class="mega-menu__column">
+                    <div className"mega-menu__content">
+                        <div className"mega-menu__column">
                         <h3>Fashion</h3>
                         <ul>
                             <li><a href="#">Women's Clothing</a></li>
@@ -82,7 +82,7 @@ export default function Header() {
                             <li><a href="#">Shoes</a></li>
                         </ul>
                         </div>
-                        <div class="mega-menu__column">
+                        <div className"mega-menu__column">
                         <h3>Electronics</h3>
                         <ul>
                             <li><a href="#">Smartphones</a></li>
@@ -91,7 +91,7 @@ export default function Header() {
                             <li><a href="#">Gaming</a></li>
                         </ul>
                         </div>
-                        <div class="mega-menu__column">
+                        <div className"mega-menu__column">
                         <h3>Home & Garden</h3>
                         <ul>
                             <li><a href="#">Furniture</a></li>
