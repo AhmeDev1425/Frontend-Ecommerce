@@ -1,10 +1,10 @@
-export default function Users() {
+export default function Products() {
     return(<>
     
           <table className="table">
             <thead>
               <tr>
-                <th>User</th>
+                <th>Prod</th>
                 <th>Email</th>
                 <th>Status</th>
                 <th>Actions</th>
